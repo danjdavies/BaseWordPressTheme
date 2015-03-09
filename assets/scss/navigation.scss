@@ -1,0 +1,224 @@
+// Navigation
+
+		#nav {
+
+			ul { margin: 0;}
+
+			.menu-icon {
+				background: #333;
+				padding: 10px;
+				display: block;
+				color: white;
+				text-transform: uppercase;
+				font-family: $header-font-family;
+				font-size: $base-font-size * 1.25;
+				text-decoration: none;
+
+				@media only screen and (min-width: $bp1024px) { display: none; }
+			}
+
+			.menu-main {
+				text-align: left;
+				margin: 0;
+				padding: 0 ;
+				list-style: none;
+				color: white;
+
+				li {
+
+					position: relative;
+					padding: 10px 10px;
+					cursor: pointer;
+					border-bottom: 1px solid white;
+
+					@media only screen and (min-width: $bp1024px) { border: 0; }
+
+					a {
+						color: white;
+						text-decoration: none;
+						font-weight: $base-font-weight;
+						text-transform: uppercase;
+						font-family: $header-font-family;
+						font-size: $base-font-size;
+					}
+
+					&:hover {
+						a { color: $peppermint-red; }
+						ul li a { color: white; }
+					}
+
+					ul {
+						padding: 0;
+						-webkit-box-shadow: none;
+						-moz-box-shadow: none;
+					}
+
+					ul li {
+						a {color: white;
+						padding: 10px 0 0;
+						margin-left: 0px; }
+						border: 0;
+					}
+
+					ul li:hover {
+						a { color: $peppermint-red; }
+					}
+				}
+
+				li:hover ul {
+					display: block;
+					opacity: 1;
+					visibility: visible;
+				}
+
+
+			}
+
+			&.open .menu-main { display: block; }
+
+			@media only screen and (min-width: $bp1024px) {
+
+				background: url(../img/nav-bg.jpg) 0 0;
+
+				.menu-main {
+					text-align: left;
+					font-family: $header-font-family;
+					float: left;
+					width: auto;
+					margin: 0;
+					padding: 0 ;
+					list-style: none;
+					font-size: $base-font-size;
+
+					li {
+						display: inline-block;
+						//margin-right: -4px;
+						padding: 10px;
+
+						ul {
+							padding: 0;
+							position: absolute;
+							z-index: 10;
+							top: 46px;
+							left: 0;
+							width: 300px;
+							-webkit-box-shadow: none;
+							-moz-box-shadow: none;
+							box-shadow: none;
+							display: none;
+							opacity: 0;
+							visibility: hidden;
+							-webkit-transiton: opacity 0.2s;
+							-moz-transition: opacity 0.2s;
+							-ms-transition: opacity 0.2s;
+							-o-transition: opacity 0.2s;
+							-transition: opacity 0.2s;
+						}
+
+						ul li {
+							background: $peppermint-blue-dark;
+							display: block;
+							padding-left: 10px;
+							margin-left: 0;
+
+							a {color: white;}
+						}
+
+						ul li:hover {
+							a { color: $peppermint-red; }
+						}
+					}
+
+					li:hover ul {
+						display: block;
+						opacity: 1;
+						visibility: visible;
+					}
+
+
+				}
+			}
+
+		}
+
+		.menu-main {
+			display: none;
+
+			@media only screen and (min-width: $bp1024px) {
+
+				display: block;
+				width: auto;
+			}
+		}
+
+		&.contact-menu {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: $peppermint-blue-dark;
+			padding: 10px;
+			z-index: 10;
+			border-bottom: 1px solid white;
+
+			li {
+				float: left;
+				margin: 0 0 0 $base-margin / 2;
+				border: none;
+				padding: 0;
+				list-style: none;
+			}
+
+			li a {
+				width: 31px;
+				height: 22px;
+				background: url(../img/menu-icons-contact.png) 0 0;
+				text-indent: -100000px;
+				display: block;
+
+				&.email { background-position: 0 0; }
+				&.telephone { background-position: -31px 0; }
+				&.twitter { background-position: -63px 0; }
+
+				&:hover {
+					background: url(../img/menu-icons-contact-hover.png) 0 0;
+
+					&.email { background-position: 0 0; }
+					&.telephone { background-position: -31px 0; }
+					&.twitter { background-position: -63px 0; }
+
+
+				}
+
+				@media only screen and (min-width: $bp1024px) {
+					margin: 5px 0 0 0;
+				}
+
+			}
+
+			@media only screen and (min-width: $bp1024px) {
+
+				float: right;
+				position: relative;
+				top: auto;
+				left: auto;
+				display: inline;
+				background: none;
+				width: auto;
+				padding: 10px 0px;
+				border: none;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+

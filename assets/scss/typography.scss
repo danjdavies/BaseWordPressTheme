@@ -1,0 +1,113 @@
+// Typography Styles
+
+h1, h2, h3, h4, h5, h6  {
+			font-family: $header-font-family;
+			font-weight: $header-font-weight;
+			line-height: $base-line-height;
+			color: $textcolor;
+			margin: $base-margin 0;
+		}
+
+		h1 { font-size: $base-font-size * 2.25; }
+
+		h2 { font-size: $base-font-size * 2; }
+
+		h3 { font-size: $base-font-size; margin-bottom: $base-margin / 2;  }
+
+		p, ol, ul {
+			font-family: $base-font-family;
+			font-size: $base-font-size;
+			line-height: $base-line-height;
+			margin: 0 0 $base-margin;
+		}
+
+		p:first-child {
+			margin-top: 0;
+		}
+
+		/*h1 + p {
+			font-size: $base-font-size * 1.5;
+			font-weight: $bold-font-weight;
+			line-height: $base-line-height / 1.15;
+		}*/
+
+		p + h2,
+		p + h3 {
+			margin-top: $base-margin * 2;
+		}
+
+		/*p + p {
+			margin-top: $base-margin * 2;
+		}*/
+
+		/*ul {
+			padding-left: $base-padding;
+
+			li { list-style: disc; }
+		}*/
+
+		ol {
+			padding-left: $base-padding;
+
+			li { list-style: decimal; }
+		}
+
+		strong, b {
+			font-weight: $bold-font-weight;
+			font-style: normal;
+		}
+
+		em, i {
+			font-style: italic;
+		}
+
+		a {
+			cursor: pointer;
+			font-weight: $bold-font-weight;
+			text-decoration: underline;
+			font-family: $base-font-family;
+		}
+
+		a:visited {
+
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+		a:active {
+
+		}
+
+		a:focus {
+			outline: none;
+		}
+
+		a:hover, a:active {
+			outline: 0;
+		}
+
+		img, object, embed {
+			height: auto;
+			max-width: 100%;
+		}
+
+		blockquote {
+			color: $textcolor;
+			font-size: $base-font-size * 1.5;
+			font-style: italic;
+			border-left: 4px solid lighten($textcolor, 50%);
+			padding: $base-padding * 2;
+			margin-left: -40px;
+			font-weight: $bold-font-weight;
+			line-height: $base-line-height;
+		}
+
+		blockquote p:last-child {
+			margin-bottom: 0;
+		}
+
+		hr {
+			margin: $base-margin * 2 0;
+		}
